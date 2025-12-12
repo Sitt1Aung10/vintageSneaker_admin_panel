@@ -1,8 +1,17 @@
+@import "tailwindcss";
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 10vw;
+  top: 5vw;
+  display: flex;
+  justify-content: center !important;
 }
 
 .logo {
@@ -18,25 +27,55 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/**/
+.dashboard_noti {
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+  padding-inline: 4rem;
+  padding-top: 7rem;
+  box-sizing: border-box;
+}
+
+.rotated_rec {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid #878571;
+}
+.rotated_rec::before {
+  content: ' ';
+  width: 110%;
+  height: 70%;
+  background-color: #fff;
+  position: absolute;
+  z-index: -1;
+  top: 15px;left: -12px;
+  rotate: 20deg;
+}
+.rotated_rec > p {
+  z-index: 9 !important;
+}
+
+/*brand*/
+.brand {
+  width: 100%;
+  height: 100%;
+  padding-inline: 4rem;
+}
+.brand_container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+} 
+.brand_card {
+  box-shadow: 1px 3px 3px #0000005e;
+}
+
+@media (max-width:768px) {
+  .dashboard_noti {
+    grid-template-columns: auto ;
+    left: 30% !important;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
