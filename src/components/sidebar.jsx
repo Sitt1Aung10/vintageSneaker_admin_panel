@@ -4,7 +4,7 @@ const sidebar = () => {
     const sidebarItems = [
         { name: 'Dashboard', path: '/dashboard' },
         { name: 'Brands', path: '/brand' },
-        { name: 'Products', path: '/products' },
+        { name: 'Products', path: '/product' },
         { name: 'Orders', path: '/orders' },
         { name: 'Users', path: '/users' },
     ]
