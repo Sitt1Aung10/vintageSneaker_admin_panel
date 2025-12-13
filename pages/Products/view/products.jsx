@@ -1,9 +1,11 @@
 import React from 'react'
+//line 3 to line 4 include
 import endpoints from '../../../endpoints/endpoints';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Product() {
+  //line 8 to 65 include//
   const [products, setProducts] = useState([]);
   const Navigate = useNavigate();
 
